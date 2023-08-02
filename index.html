@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Main container -->
+        <nav class="level m-5">
+            <!-- Left side -->
+            <div class="level-right">
+                <div class="level-item">
+                    <p class="subtitle is-5 mr-3">
+                        Weather Dashboard
+                    </p>
+                    <ion-icon size="large" name="sunny-outline" class="mr-6"></ion-icon>
+                </div>
+                <div class="level-item">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <input class="input" type="text" placeholder="Search for a City">
+                        </p>
+                        <p class="control">
+                            <button id="search" class="button is-primary">
+                                Search
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="columns m-1">
+            <div id="popularSearches" class="column is-2 ">
+                <h1 class="has-text-centered mb-5">Popular Searches</h1>
+                <button class="button is-fullwidth mb-2">Normal</button>
+                <button class="button is-fullwidth mb-2">Normal</button>
+                <button class="button is-fullwidth mb-2">Normal</button>
+                <button class="button is-fullwidth mb-2">Normal</button>
+                <button class="button is-fullwidth mb-2">Normal</button>
+                <button class="button is-fullwidth mb-2">Normal</button>
+                <button class="button is-fullwidth mb-2">Normal</button>
+                <button class="button is-fullwidth">Normal</button>
+            </div>
+            <div id='fiveDayForecast' class=" column box">
+                <div class="box">Today's Forecast</div>
+                <div class="columns">
+                    <div class="column box m-3 day">
+                        First column
+                    </div>
+                    <div class="column box m-3 day">
+                        Second column
+                    </div>
+                    <div class="column box m-3 day">
+                        Second column
+                    </div>
+                    <div class="column box m-3 day">
+                        Second column
+                    </div>
+                    <div class="column box m-3 day">
+                        Second column
+                    </div>
+                </div>  
+            </div>
+        </section>
+    </main>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="./assets/script.js"></script>
+
+
+</html>
