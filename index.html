@@ -13,14 +13,17 @@
     <header>
         <!-- Main container -->
         <nav class="level m-5">
+
             <!-- Left side -->
-            <div class="level-right">
+            <div id="header" class="level-left">
                 <div class="level-item">
                     <p class="subtitle is-5 mr-3 is-size-3 has-text-primary">
                         Weather Dashboard
                     </p>
                     <ion-icon size="large" name="sunny-outline" class="mr-6"></ion-icon>
                 </div>
+            </div>
+            <div>
                 <div class="level-item">
                     <div class="field has-addons">
                         <p class="control">
@@ -52,24 +55,9 @@
                 <button class="button is-fullwidth">London</button>
             </div>
             </div>
-            <div id='fiveDayForecast' class=" column">
-                <div class="box is-size-4">Today's Forecast</div>
-                <div class="columns">
-                    <div class="column box m-3 day">
-                        First column
-                    </div>
-                    <div class="column box m-3 day">
-                        Second column
-                    </div>
-                    <div class="column box m-3 day">
-                        Second column
-                    </div>
-                    <div class="column box m-3 day">
-                        Second column
-                    </div>
-                    <div class="column box m-3 day">
-                        Second column
-                    </div>
+            <div id='main' class="column">
+                <div class="box is-size-4 todaysForecast"></div>
+                <div class="columns fiveDay box m-1">
                 </div>  
             </div>
         </section>
