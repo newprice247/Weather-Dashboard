@@ -2,7 +2,7 @@ var fiveDayForecast = $('.day')
 var today = new Date()
 $('#header').append(`
 
-    <p class="is-size-4">${today.toDateString()}</p>`)
+    <p class="is-size-4 has-text-centered mb-4">${today.toDateString()}</p>`)
 var getWeather = () => {
     // $.each(recentSearches, (i,val) => {
     //     $('#recentSearches').append(`<div>${val}</div>`)
@@ -13,12 +13,10 @@ var getWeather = () => {
             $("#search").click();
         }
     });
-    
     $('#search').on('click', function () {
         $('.fiveDay').html(``)
         $('.fiveDay').addClass('box')
         var city = $('.input').val()
-
         var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?&q=${city}&units=imperial&cnt=&appid=4ab8fb0f640052a7c1fc096698340e94`;
 
         fetch(requestUrl)
@@ -42,7 +40,6 @@ var getWeather = () => {
             `)
 
                 for (let i = 4; i < data.list.length; i += 8) {
-                    console.log(data.list) //dates
                     var dt = data.list[i].dt;
                     var day = new Date(dt * 1000);
                     var pop = data.list[i].pop;
@@ -69,21 +66,5 @@ var getWeather = () => {
 
 
 }
-var x = document.getElementById("demo");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
-}
-
-$('#r').on('click', getLocation())
 
 getWeather()

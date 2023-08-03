@@ -32,7 +32,7 @@
                 <div class="level-item">
                     <div class="field has-addons">
                         <p class="control">
-                            <input id='searchBar'class="input" type="text" placeholder="Search for a City">
+                            <input id="searchBar" class="input" type="text" placeholder="Search for a City">
                         </p>
                         <p class="control">
                             <button id="search" class="button is-primary">
@@ -46,10 +46,14 @@
     </header>
     <main>
         <section class="columns m-1">
-            <div class="column is-2">
+            <div class="column is-3">
                 <div id="recentSearches" class="box has-text-centered">
                     <p class="is-size-5 mb-5 has-text-primary-dark search">Recent Searches</p>
-                    <button id='r' class="button is-responsive is-fullwidth">No history</button>
+                    <div class="select">
+                        <select class="is-hovered">
+                          <option>No Search History</option>
+                        </select>
+                      </div>
                 </div>
                 <div id="popularSearches" class="box">
                     <h1 class="has-text-centered mb-5 is-size-5 has-text-primary-dark search">Popular Searches</h1>
@@ -62,14 +66,13 @@
             </div>
             <div id='main' class="column">
                 <div class="box is-size-4 todaysForecast">
-                    <p class="has-text-centered is-size-3">Welcome to <span class="logo has-text-primary">Weather Dashboard!</span></p>
-                    <p class="m-6">With this innovative weather dashboard app, you can access accurate and up-to-date forecasts for any city across the globe in just a few taps. Whether you're planning a vacation or simply need to know what to wear tomorrow, we've got you covered with our user-friendly interface and reliable data sources. Stay ahead of the weather with our five-day forecasts, which include essential information like temperature, humidity, precipitation chances, and wind speed. Don't let unpredictable weather catch you off guard - use <span class="logo has-text-primary">Weather Dashboard</span> and be prepared for whatever Mother Nature throws your way!</p>
+                    <p class="has-text-centered is-size-4">Welcome to <span class="logo has-text-primary">Weather Dashboard!</span></p>
+                    <p>With this innovative weather dashboard app, you can access accurate and up-to-date forecasts for any city across the globe in just a few taps. Whether you're planning a vacation or simply need to know what to wear tomorrow, we've got you covered with our user-friendly interface and reliable data sources. Stay ahead of the weather with our five-day forecasts, which include essential information like temperature, humidity, precipitation chances, and wind speed. Don't let unpredictable weather catch you off guard - use <span class="logo has-text-primary">Weather Dashboard</span> and be prepared for whatever Mother Nature throws your way!</p>
                 </div>
                 <div class="columns fiveDay m-1">
                 </div>
             </div>
         </section>
-        <div id="demo"></div>
     </main>
 
 
