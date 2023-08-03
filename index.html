@@ -7,6 +7,9 @@
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,14 +23,16 @@
                     <p class="subtitle is-5 mr-3 is-size-3 has-text-primary">
                         Weather Dashboard
                     </p>
-                    <ion-icon size="large" name="sunny-outline" class="mr-6"></ion-icon>
+                    <figure class="image is-64x64">
+                        <img src="./assets/images/cool-sun.gif">
+                    </figure>
                 </div>
             </div>
             <div>
                 <div class="level-item">
                     <div class="field has-addons">
                         <p class="control">
-                            <input class="input" type="text" placeholder="Search for a City">
+                            <input id='searchBar'class="input" type="text" placeholder="Search for a City">
                         </p>
                         <p class="control">
                             <button id="search" class="button is-primary">
@@ -42,31 +47,36 @@
     <main>
         <section class="columns m-1">
             <div class="column is-2">
-            <div id="recentSearches" class="box has-text-centered">
-                <p class="is-size-5 mb-5 has-text-primary-dark">Recent Searches</p>
-                <button class="button is-responsive is-fullwidth">No history</button>
-            </div>
-            <div id="popularSearches" class="box">
-                <h1 class="has-text-centered mb-5 is-size-5 has-text-primary-dark">Popular Searches</h1>
-                <button class="button is-fullwidth mb-2">Miami</button>
-                <button class="button is-fullwidth mb-2">Los Angeles</button>
-                <button class="button is-fullwidth mb-2">New York City</button>
-                <button class="button is-fullwidth mb-2">Tokyo</button>
-                <button class="button is-fullwidth">London</button>
-            </div>
+                <div id="recentSearches" class="box has-text-centered">
+                    <p class="is-size-5 mb-5 has-text-primary-dark search">Recent Searches</p>
+                    <button id='r' class="button is-responsive is-fullwidth">No history</button>
+                </div>
+                <div id="popularSearches" class="box">
+                    <h1 class="has-text-centered mb-5 is-size-5 has-text-primary-dark search">Popular Searches</h1>
+                    <button class="button is-fullwidth mb-2">Miami</button>
+                    <button class="button is-fullwidth mb-2">Los Angeles</button>
+                    <button class="button is-fullwidth mb-2">New York City</button>
+                    <button class="button is-fullwidth mb-2">Tokyo</button>
+                    <button class="button is-fullwidth">London</button>
+                </div>
             </div>
             <div id='main' class="column">
-                <div class="box is-size-4 todaysForecast"></div>
-                <div class="columns fiveDay box m-1">
-                </div>  
+                <div class="box is-size-4 todaysForecast">
+                    <p class="has-text-centered is-size-3">Welcome to <span class="logo has-text-primary">Weather Dashboard!</span></p>
+                    <p class="m-6">With this innovative weather dashboard app, you can access accurate and up-to-date forecasts for any city across the globe in just a few taps. Whether you're planning a vacation or simply need to know what to wear tomorrow, we've got you covered with our user-friendly interface and reliable data sources. Stay ahead of the weather with our five-day forecasts, which include essential information like temperature, humidity, precipitation chances, and wind speed. Don't let unpredictable weather catch you off guard - use <span class="logo has-text-primary">Weather Dashboard</span> and be prepared for whatever Mother Nature throws your way!</p>
+                </div>
+                <div class="columns fiveDay m-1">
+                </div>
             </div>
         </section>
+        <div id="demo"></div>
     </main>
 
 
 </body>
 
-<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="./assets/script.js"></script>
