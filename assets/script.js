@@ -3,8 +3,22 @@ var today = new Date()
 
 var recent = [];
 
+var getRecentSearches = () => {
+    var searchHistory = JSON.parse(localStorage.getItem("city"))
+    console.log(searchHistory)
+    $.each(searchHistory, (i, val) => {
+        $('.navbar-dropdown').append(`
+            <a class="navbar-item recentItem">
+                ${val}
+            </a>
+        `)
+    })
+}
+
+getRecentSearches()
+
 $('#header').append(`
-    <p class="is-size-4 has-text-centered mb-3">${today.toDateString()}</p>
+    <p class="is-size-4 has-text-centered m-3">${today.toDateString()}</p>
 `)
 
 $('.fav').on('click', function () {
@@ -29,22 +43,27 @@ $('#search').on('click', function () {
     }
     console.log(recent)
     getWeather(city)
-    localStorage.setItem("city", recent)
+    localStorage.setItem("city", JSON.stringify(recent))
 
 })
 
-var getRecentSearches = () => {
-    var searchHistory = [localStorage.getItem("city")]
-    console.log(searchHistory)
-    // $.each(searchHistory, (i, val) => {
-    //     $('#recentDropdown').append(`
-    //         <option>${val[0]}</option>
-    //     `)
-    // })
+$('.recentItem').on('click', function () {
+    $('.fiveDay').html(``)
+    $('.fiveDay').addClass('box')
+    var city = $(this).text()
+    getWeather(city)
+})
 
-}
-
-getRecentSearches()
+var dropped = false;
+$('.has-dropdown').on('click', function () {
+    if(dropped !== true) {
+        $('.has-dropdown').addClass('is-active')
+        dropped = true
+    } else {
+        $('.has-dropdown').removeClass('is-active')
+        dropped = false
+    }
+})
 
 var getWeather = (city) => {
     var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?&q=${city}&units=imperial&cnt=&appid=4ab8fb0f640052a7c1fc096698340e94`;
