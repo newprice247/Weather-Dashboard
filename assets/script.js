@@ -5,7 +5,6 @@ var searchHistory = [];
 //Retrieves the user's recent searches from local storage and appends them as buttons into the dropdown in the navbar
 var getRecentSearches = () => {    
     var searchHistory = JSON.parse(localStorage.getItem("city"))
-    console.log(searchHistory)
     $.each(searchHistory, (i, val) => {
         $('.navbar-dropdown').append(`
             <a class="navbar-item recentItem">
