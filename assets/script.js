@@ -1,5 +1,5 @@
 //Retrieves today's date
-var today = moment().format("ddd MMM Do YYYY"); 
+var today = moment().format("dddd M / D / YYYY"); 
 //Declares an empty string to hold the recent searches
 var searchHistory = [];
 //Retrieves the user's recent searches from local storage and appends them as buttons into the dropdown in the navbar
@@ -130,9 +130,9 @@ var getWeather = (city) => {
                 }
                 //appends to the webpage for each of the five days
                 $('.fiveDay').append(`
-                        <div class="column m-3 has-text-centered day">
-                                <p class="is-size-5 mb-3 has-text-primary-dark">${moment().add(daysFromNow, 'days').format('ddd MMM Do')}</p>
-                                <div class='box has-text-centered'>
+                        <div class="column m-3 has-text-centered day box">
+                                <p class="is-size-4 mb-3 has-text-primary-dark">${moment().add(daysFromNow, 'days').format('dddd  M/D ')}</p>
+                                <div class='has-text-centered'>
                                     <p class="has-text-primary-dark is-size-5">${data.list[i].weather[0].main}</p>
                                     <figure class="image is-96x96 m-auto">
                                         <img src="${weatherAnimation}">
