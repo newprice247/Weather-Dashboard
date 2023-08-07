@@ -20,6 +20,12 @@ The goal of this project was to build a web app that functions as a Weather Dash
 
 ![Weather Dashboard Screenshot](./assets/images/weather-dashboard-screenshot.png)
 
+## Credits
+
+All of the animated icon gifs were sourced from [Flaticon.com](https://www.flaticon.com/free-animated-icons/weather), and the appropriate attribution to the author Freepik is included at the bottom of the Weather Dashboard page.
+
+All weather data was retrieved via API from [Open Weather Map](https://openweathermap.org/forecast5).
+
 ## Contact Me
 
 [Nathaniel Price](https://github.com/newprice247) @ Github
