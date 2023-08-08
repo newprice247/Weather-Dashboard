@@ -130,7 +130,7 @@ var getWeather = (city) => {
                 //appends to the webpage for each of the five days
                 $('.fiveDay').append(`
                         <div class="column m-3 has-text-centered day box">
-                                <p class="is-size-4 mb-3 has-text-primary-dark">${moment().add(daysFromNow, 'days').format('dddd  M/D ')}</p>
+                                <p class="is-size-4 mb-3 has-text-primary-dark">${moment().add(daysFromNow, 'days').format('ddd  M/D ')}</p>
                                 <div class='has-text-centered'>
                                     <p class="has-text-primary-dark is-size-5">${data.list[i].weather[0].main}</p>
                                     <figure class="image is-96x96 m-auto">
